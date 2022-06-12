@@ -18,7 +18,7 @@ def clip(value: numeric, minimum: numeric, maximum: numeric) -> numeric:
 def attack(dungeon, player, gnome): 
     # completar
     raise NotImplementedError
-
+#%%
 def set_move(dungeon: mapping.Dungeon, player, location):
     player.loc()
     player.x, player.y = location
@@ -30,8 +30,24 @@ def get_loc_up(dungeon: mapping.Dungeon, location):
     xy = x, y
     return xy
 
+def get_loc_down(dungeon: mapping.Dungeon, location):
+    x, y = location
+    y += 1  
+    xy = x, y
+    return xy
 
+def get_loc_left(dungeon: mapping.Dungeon, location):
+    x, y = location
+    x -= 1  
+    xy = x, y
+    return xy
 
+def get_loc_right(dungeon: mapping.Dungeon, location):
+    x, y = location
+    x += 1  
+    xy = x, y
+    return xy
+#%%
 def move_to(dungeon: mapping.Dungeon, player: player.Player, location):
     player.loc#ubicacionactual
     raise NotImplementedError

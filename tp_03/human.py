@@ -25,3 +25,8 @@ class Human(Player):
             self.sword = True
 
         pass
+
+    def has_pickaxe(self):
+        if self.tool == True:
+            self.pickaxe = True
+        return self.pickaxe
